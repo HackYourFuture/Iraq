@@ -30,19 +30,22 @@
    data(){
      return {
        columns: 10,
-       paths: this.getPaths()
+       paths: []
      }
    },
    mounted(){
-     if(window) window.onResize = ()=>{
-       this.width = window.innerWidth
-       this.height = window.innerHeight
-       this.paths = this.getPaths()
-     }
-
+     this.paths = this.getPaths()
      setInterval(()=>{
        this.paths[rand(this.paths.length)].color = this.colors[rand(this.colors.length)];
      }, 150);
+   },
+   watch: {
+     width(){
+       this.paths = this.getPaths()
+     },
+     height(){
+       this.paths = this.getPaths()
+     }
    },
    methods:{
      getPathString(i){

@@ -1,6 +1,6 @@
 <template>
   <div class="main-screen">
-    <div class="overlay"  v-if="width">
+    <div class="overlay">
       <SVGTriangles :width="width" :height="height"></SVGTriangles>
     </div>
     <section class="hero is-fullheight">
@@ -10,7 +10,7 @@
             HackYourFuture
           </h1>
           <h2 class="subtitle is-3">
-            Iraq ~ Dauk
+            Iraq ~ Duhok
           </h2>
           <h3 class="subtitle is-5">
             Workshop for <u>fast</u>, <u>scalable</u> and <u>open</u> web development!<br/>
@@ -47,6 +47,11 @@
    mounted(){
      this.width = window.innerWidth
      this.height = window.innerHeight
+
+     if(window) window.onResize = ()=>{
+       this.width = window.innerWidth
+       this.height = window.innerHeight
+     }
    }
  }
 </script>

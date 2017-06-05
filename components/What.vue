@@ -10,14 +10,14 @@
             </div>
           </div>
         </div>
-        <div class="column is-half svg" v-if="halfWidth > 0">
+        <div class="column is-half svg">
           <SVGTriangles :width="halfWidth" :height="height"></SVGTriangles>
         </div>
       </div>
     </div>
     <div class="half-hero is-fullheight hero">
       <div class="columns">
-        <div class="column is-half svg is-hidden-mobile" v-if="halfWidth > 0">
+        <div class="column is-half svg is-hidden-mobile">
           <SVGTriangles :width="halfWidth" :height="height"></SVGTriangles>
         </div>
         <div class="column is-half">
@@ -46,6 +46,10 @@
    mounted(){
      this.halfWidth = window.innerWidth / 2
      this.height = window.innerHeight
+     if(window) window.onResize = ()=>{
+       this.width = window.innerWidth
+       this.height = window.innerHeight
+     }
    },
    components: {
      SVGTriangles,
