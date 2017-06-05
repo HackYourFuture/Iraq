@@ -10,6 +10,7 @@
    return Math.floor(Math.random() * to)
  }
  export default {
+   name: 'SVGTriangles',
    props: {
      colors: {
        default: () => {
@@ -26,6 +27,10 @@
      height: { default: 0 },
      size: { default: 30 },
      margin: { default: 50 },
+   },
+   serverCacheKey () {
+     // Will change every 10 secondes
+     return Math.floor(Date.now() / 10000)
    },
    data(){
      return {
