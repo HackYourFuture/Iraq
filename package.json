@@ -6,6 +6,7 @@
   "dependencies": {
     "bulma": "^0.4.1",
     "firebase": "^4.0.0",
+    "gh-pages": "^1.0.0",
     "node-polyglot": "^2.2.2",
     "nuxt": "^1.0.0-alpha.3",
     "promise-polyfill": "^6.0.2"
@@ -13,6 +14,8 @@
   "devDependencies": {},
   "scripts": {
     "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"/>
     <Logo></Logo>
     <What></What>
     <Who></Who>
@@ -25,7 +26,6 @@
  }
 </script>
 <style>
- @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
  @import './../node_modules/bulma/css/bulma.css';
 
  .half-hero .container{
