@@ -8,15 +8,13 @@
     "firebase": "^4.0.0",
     "gh-pages": "^1.0.0",
     "node-polyglot": "^2.2.2",
-    "nuxt": "^1.0.0-alpha.3",
     "promise-polyfill": "^6.0.2",
     "vue-cli": "^2.8.2"
   },
   "devDependencies": {},
   "scripts": {
-    "dev": "vue",
-    "build": "nuxt build",
-    "generate": "nuxt generate"
+    "dev": "vue build components/App.vue -o",
+    "build": "vue build components/App.vue --lib --production && cp index.html dist/index.html"
   },
   "repository": {
     "type": "git",
