@@ -1,5 +1,5 @@
 module.exports = {
-  env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+  build: {
+    publicPath: process.env.BASE_URL || null
   }
 }
