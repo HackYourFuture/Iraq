@@ -1,0 +1,28 @@
+{
+  "name": "hyf-iraq",
+  "version": "1.0.0",
+  "description": "Workshop for fast, scalable and open web development",
+  "main": "index.js",
+  "dependencies": {
+    "bulma": "^0.4.1",
+    "firebase": "^4.0.0",
+    "node-polyglot": "^2.2.2",
+    "nuxt": "^1.0.0-alpha.3",
+    "promise-polyfill": "^6.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "nuxt dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HackYourFuture/Iraq.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HackYourFuture/Iraq/issues"
+  },
+  "homepage": "https://github.com/HackYourFuture/Iraq#readme"
+}
