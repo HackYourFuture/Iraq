@@ -14,7 +14,8 @@
   "devDependencies": {},
   "scripts": {
     "dev": "vue build components/App.vue -o",
-    "build": "vue build components/App.vue --lib --production && cp index.html dist/index.html"
+    "build": "vue build components/App.vue --lib --production && cp index.html dist/index.html",
+    "publish": "./node_modules/.bin/gh-pages --dist dist/ --branch gh-pages"
   },
   "repository": {
     "type": "git",
