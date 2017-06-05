@@ -1,5 +1,5 @@
 module.exports = {
   build: {
-    publicPath: process.env.BASE_URL || null
+    publicPath: 'https://hackyourfuture.github.io/Iraq/'
   }
 }
