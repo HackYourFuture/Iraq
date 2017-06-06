@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"/>
     <Logo></Logo>
     <What></What>
-    <Programma></Programma>
+    <Program></Program>
     <Who></Who>
   </div>
 </template>
@@ -33,7 +33,7 @@
  import Who from './../components/Who.vue'
  import What from './../components/What.vue'
  import Logo from './../components/Logo.vue'
- import Programma from './../components/Programma.vue'
+ import Program from './../components/Program.vue'
  import i18n from './../locales/index.js'
 
  export default {
@@ -42,7 +42,7 @@
      Logo,
      Who,
      What,
-     Programma
+     Program
    },
    data(){
      return {
