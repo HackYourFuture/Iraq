@@ -1,15 +1,40 @@
 <template>
   <div>
+    <nav class="nav">
+      <div class="nav-center">
+        <a class="nav-item" v-on:click="switchLang('en')">
+          English
+        </a>
+        <a class="nav-item" v-on:click="switchLang('ar')">
+          Arabic
+        </a>
+        <a class="nav-item" v-on:click="switchLang('ku')">
+          Kurdish
+        </a>
+      </div>
+    </nav>
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"/>
     <Logo></Logo>
     <What></What>
+    <Programma></Programma>
     <Who></Who>
   </div>
 </template>
+<style>
+ nav.nav{
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
+   border-bottom: 1px solid #ccc;
+ }
+</style>
 <script>
  import Who from './../components/Who.vue'
  import What from './../components/What.vue'
  import Logo from './../components/Logo.vue'
+ import Programma from './../components/Programma.vue'
+ import i18n from './../locales/index.js'
 
  export default {
    layout: 'default',
@@ -17,10 +42,16 @@
      Logo,
      Who,
      What,
+     Programma
    },
    data(){
      return {
        links: []
+     }
+   },
+   methods: {
+     switchLang(lang){
+       i18n.locale = lang
      }
    }
  }

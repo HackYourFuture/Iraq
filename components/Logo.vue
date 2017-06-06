@@ -10,11 +10,13 @@
             HackYourFuture
           </h1>
           <h2 class="subtitle is-3">
-            Iraq ~ Duhok
+            {{ $t('main.location') }}
           </h2>
           <h3 class="subtitle is-5">
-            Workshop for <u>fast</u>, <u>scalable</u> and <u>open</u> web development!<br/>
-            <b>02/07/2017 - 07/07/2017</b>
+            <p v-html="$t('main.what')"></p>
+            <p>
+              <b>02/07/2017 - 07/07/2017</b>
+            </p>
           </h3>
         </div>
       </div>
@@ -34,8 +36,12 @@
 </style>
 <script>
  import SVGTriangles from './SVGTriangles.vue'
+ import i18n from './../locales/index.js'
+
  export default {
+   i18n,
    data(){
+     console.log(this)
      return {
        width: 0,
        height: 0

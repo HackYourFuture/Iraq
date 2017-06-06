@@ -5,7 +5,7 @@
         <div class="column is-half">
           <div class="hero-body">
             <div class="container">
-              <h1 class="title">What would you lear</h1>
+              <h1 class="title">{{ $t('what.title') }}</h1>
               <h2 class="subtitle"></h2>
             </div>
           </div>
@@ -23,7 +23,7 @@
         <div class="column is-half">
           <div class="hero-body">
             <div class="container">
-              <h1 class="title">Requirements</h1>
+              <h1 class="title">{{ $t('what.requirements.title') }}</h1>
               <h2 class="subtitle">We wanna make sure...</h2>
             </div>
           </div>
@@ -34,8 +34,10 @@
 </template>
 <script>
  import SVGTriangles from './SVGTriangles.vue'
+ import i18n from './../locales/index.js'
 
  export default {
+   i18n,
    data(){
      return {
        halfWidth: 0,

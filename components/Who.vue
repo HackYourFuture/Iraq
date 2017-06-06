@@ -1,11 +1,9 @@
 <template>
   <div class="content is-large">
-    <h1 class="title">Who we are</h1>
-    <p>
-      <b>HackYourFuture</b> is a no profit organization. We run a Six month program for teaching Web Developement to refugees that are living in Europe. Preparing for the most High demanded job with the help of the latest technology.
-    </p>
+    <h1 class="title">{{ $t('who.title') }}</h1>
+    <p v-html="$t('who.description')"></p>
     <hr/>
-    <h1 class="title">Teachers</h1>
+    <h1 class="title">{{ $t('who.teachers.title') }}</h1>
     <div class="media">
       <figure class="media-left image is-128x128">
         <img alt="" src="http://hackyourfuture.net/images/mentors/gijs.jpg"/>
@@ -42,7 +40,10 @@
 </style>
 <script>
  import SVGTriangles from './SVGTriangles.vue'
+ import i18n from './../locales/index.js'
+
  export default {
+   i18n,
    data(){
      return {
        halfWidth: 0,
