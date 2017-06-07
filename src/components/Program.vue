@@ -68,18 +68,19 @@
  }
 </style>
 <script>
- import SVGTriangles from './SVGTriangles.vue'
+ import SVGTriangles from './SVGTriangles'
+
  export default {
    components: {
-     SVGTriangles
+     SVGTriangles,
    },
-   data(){
+   data() {
      return {
-       width: 0
+       width: 0,
      }
    },
-   mounted(){
+   mounted() {
      this.width = window.innerWidth
-   }
+   },
  }
 </script>

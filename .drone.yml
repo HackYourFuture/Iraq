@@ -1,4 +1,13 @@
 pipeline:
+  test:
+    image: node:latest
+    commands:
+      - npm install
+      - npm run lint
+    when:
+      branch:
+        exclude: gh-pages
+
   build:
     image: node:latest
     secrets: [ GH_TOKEN ]
@@ -9,4 +18,5 @@ pipeline:
       - npm run build
       - ./deploy
     when:
+      event: [push, tag, deployment]
       branch: master
