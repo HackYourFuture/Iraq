@@ -33,28 +33,30 @@
   </div>
 </template>
 <script>
- import SVGTriangles from './SVGTriangles.vue'
- import i18n from './../locales/index.js'
+ import SVGTriangles from './SVGTriangles'
+ import i18n from './../locales/index'
 
- export default {
+export default {
    i18n,
-   data(){
+   data() {
      return {
        halfWidth: 0,
        height: 0,
-       links: []
+       links: [],
      }
    },
-   mounted(){
+   mounted() {
      this.halfWidth = window.innerWidth / 2
      this.height = window.innerHeight
-     if(window) window.onResize = ()=>{
-       this.width = window.innerWidth
-       this.height = window.innerHeight
+     if (window) {
+       window.onResize = () => {
+         this.width = window.innerWidth
+         this.height = window.innerHeight
+       }
      }
    },
    components: {
      SVGTriangles,
-   }
+   },
  }
 </script>

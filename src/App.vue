@@ -30,11 +30,11 @@
  }
 </style>
 <script>
- import Who from './../components/Who.vue'
- import What from './../components/What.vue'
- import Logo from './../components/Logo.vue'
- import Program from './../components/Program.vue'
- import i18n from './../locales/index.js'
+ import Who from './components/Who'
+ import What from './components/What'
+ import Logo from './components/Logo'
+ import Program from './components/Program'
+ import i18n from './locales/index'
 
  export default {
    layout: 'default',
@@ -42,18 +42,18 @@
      Logo,
      Who,
      What,
-     Program
+     Program,
    },
-   data(){
+   data() {
      return {
-       links: []
+       links: [],
      }
    },
    methods: {
-     switchLang(lang){
+     switchLang(lang) {
        i18n.locale = lang
-     }
-   }
+     },
+   },
  }
 </script>
 <style>
