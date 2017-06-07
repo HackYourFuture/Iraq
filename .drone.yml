@@ -1,4 +1,9 @@
 pipeline:
+  test:
+    image: node:latest
+    commands:
+      - npm install
+      - npm run lint
   build:
     image: node:latest
     secrets: [ GH_TOKEN ]
