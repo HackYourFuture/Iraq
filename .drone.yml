@@ -10,10 +10,12 @@ pipeline:
 
   build:
     image: node:latest
-    secrets: [ GH_TOKEN ]
+    secrets: [ GH_TOKEN, SSH_KEY ]
     environment:
       - GH_TOKEN=${GH_TOKEN}
+      - SSH_KEY=${SSH_KEY}
     commands:
+      - mkdir /root/.ssh && echo "$SSH_KEY" > /root/.ssh/id_rsa && chomd 0600 /root/.ssh/id_rsa
       - npm install
       - npm run build
       - ./deploy
