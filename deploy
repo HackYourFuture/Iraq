@@ -1,13 +1,9 @@
-#!/usr/bin/env node
-const gh = require('gh-pages')
-
-gh.publish('dist', {
-  branch: 'gh-pages',
-  repo: 'git@github.com:HackYourFuture/Iraq.git',
-  user: {
-    name: 'ideabile-ci',
-    email: 'drone@ideabile.com'
-  }
-}, (err) => {
-   console.log(err);
-});
+#!/usr/bin/sh
+git fetch && git merge master
+git branch -D gh-pages 2>/dev/null || true
+git branch -D draft 2>/dev/null || true
+git checkout -b draft
+git add -f dist
+git commit -am "Deploy on gh-pages"
+git subtree split --prefix dist -b gh-pages
+git push --force gh-pages:gh-pages > /dev/null 2>&1
