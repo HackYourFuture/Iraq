@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/env bash
 git fetch && git merge master
 git branch -D gh-pages 2>/dev/null || true
 git branch -D draft 2>/dev/null || true
