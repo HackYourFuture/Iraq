@@ -20,5 +20,4 @@ pipeline:
       - npm run build
       - ./deploy
     when:
-      event: [push, tag, deployment]
       branch: master

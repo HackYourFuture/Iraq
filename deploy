@@ -3,7 +3,7 @@ const gh = require('gh-pages')
 
 gh.publish('dist', {
   branch: 'gh-pages',
-  repo: `https://${process.env.GH_TOKEN}@github.com/HackYourFuture/Iraq.git`,
+  repo: 'git@github.com:HackYourFuture/Iraq.git',
   user: {
     name: 'ideabile-ci',
     email: 'drone@ideabile.com'
