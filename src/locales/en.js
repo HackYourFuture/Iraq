@@ -1,3 +1,5 @@
+import ProgramContent from './../content/en/Program.md'
+
 export default {
   main: {
     location: 'Iraq ~ Duhok',
@@ -22,4 +24,8 @@ export default {
       title: 'Teachers',
     },
   },
+  program: {
+    title: 'Program',
+  },
+  ProgramContent,
 }

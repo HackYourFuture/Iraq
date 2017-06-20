@@ -1,3 +1,4 @@
+import ProgramContent from './../content/ar/Program.md'
 
 export default {
   main: {
@@ -21,4 +22,8 @@ export default {
       title: 'Teachers',
     },
   },
+  program: {
+    title: 'Program',
+  },
+  ProgramContent,
 }

@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+git config user.name "Ukulele"
+git config user.email "ukulele@hackyourfuture.net"
 git fetch && git merge master
 git branch -D gh-pages 2>/dev/null || true
 git branch -D draft 2>/dev/null || true
@@ -6,4 +8,4 @@ git checkout -b draft
 git add -f dist
 git commit -am "Deploy on gh-pages"
 git subtree split --prefix dist -b gh-pages
-git push --force gh-pages:gh-pages > /dev/null 2>&1
+git push --force gh-pages:gh-pages
