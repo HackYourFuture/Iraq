@@ -9,4 +9,5 @@ git checkout -b draft
 git add -f dist
 git commit -am "Deploy on gh-pages"
 git subtree split --prefix dist -b gh-pages
-git push --force git@github.com:HackYourFuture/Iraq.git gh-pages:gh-pages
+git remote add upstream git@github.com:HackYourFuture/Iraq.git
+git push --force upstream gh-pages
