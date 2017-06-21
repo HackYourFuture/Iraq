@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 git config user.name "Ukulele"
 git config user.email "ukulele@hackyourfuture.net"
 git fetch && git merge master
