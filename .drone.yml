@@ -16,7 +16,7 @@ pipeline:
       - SSH_KEY=${SSH_KEY}
       - SSH_PUB=${SSH_PUB}
     commands:
-      - mkdir /root/.ssh && echo "$SSH_KEY" > /root/.ssh/id_rsa && echo "$SSH_PUB" > /root/.ssh/id_rsa.pub
+      - mkdir /root/.ssh && echo "$SSH_KEY" > /root/.ssh/id_dsa && echo "$SSH_PUB" > /root/.ssh/id_dsa.pub
       - chmod -R 0600 /root/.ssh/id_rsa && chmod -R 0755 /root/.ssh/id_rsa.pub
       - npm install
       - npm run build
